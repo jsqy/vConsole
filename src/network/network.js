@@ -165,6 +165,7 @@ class VConsoleNetworkTab extends VConsolePlugin {
 
     // update dom
     let domData = {
+      id: id,
       url: item.url,
       status: item.status || '-',
       type: '-',
@@ -228,7 +229,6 @@ class VConsoleNetworkTab extends VConsolePlugin {
       // mock onreadystatechange
       let _onreadystatechange = XMLReq.onreadystatechange || function() {};
       XMLReq.onreadystatechange = function() {
-
         let item = that.reqList[id] || {};
 
         // update status
