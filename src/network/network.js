@@ -229,7 +229,7 @@ class VConsoleNetworkTab extends VConsolePlugin {
       // mock onreadystatechange
       let _onreadystatechange = XMLReq.onreadystatechange || function() {};
       XMLReq.onreadystatechange = function() {
-        let item = that.reqList[id] || {};
+        let item = that.reqList[id] || { xhr: this };
 
         // update status
         item.url = url;
